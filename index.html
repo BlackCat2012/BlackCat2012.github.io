@@ -1,5 +1,64 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://www.jsdaima.com/Upload/1415087241/style.css" media="screen" rel="stylesheet" />
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+
+	var spotlight = {
+		opacity : 0.2,
+		imgWidth : $('.spotlightWrapper ul li').find('img').width(), 
+		imgHeight : $('.spotlightWrapper ul li').find('img').height() 
+	
+	};
+
+	$('.spotlightWrapper ul li').css({ 'width' : spotlight.imgWidth, 'height' : spotlight.imgHeight });
+
+	$('.spotlightWrapper ul li').hover(function(){
+		$(this).find('img').addClass('active').css({ 'opacity' : 1});
+		$(this).siblings('li').find('img').css({'opacity' : spotlight.opacity}) ;
+	}, function(){
+		$(this).find('img').removeClass('active');
+	});
+
+	$('.spotlightWrapper ul').bind('mouseleave',function(){
+		$(this).find('img').css('opacity', 1);
+	});
+
+});
+</script>
+
+</head>
 <body>
-<h1>这是我使用github pages搭建的个人站点。</h1>
+
+<div class='spotlightWrapper'>
+	<ul>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/1.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/2.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/3.png' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/4.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/5.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/6.png' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/7.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/9.png' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/10.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/11.png' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/12.png' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/13.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/14.png' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/15.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/16.jpg' /></a></li>
+		<li><a href="http://www.jsdaima.com/"><img src='http://www.jsdaima.com/Upload/1415087241/5.jpg' /></a></li>
+	</ul>
+</div>
+<script type="text/javascript">
+function stop(){
+   return false;
+}
+document.oncontextmenu=stop;
+</script>
+<!-- 本代码由js代码网（http://www.jsdaima.com）收集并编辑整理 -->
 </body>
-</html>
+</html> 
